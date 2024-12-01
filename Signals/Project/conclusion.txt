@@ -1,0 +1,5 @@
+server has ip routing table and ARP table 
+1. we need to add option, when the user select it
+  a. flush the tables on master process into shared memory
+  b. server send signals to his clients to notify them to free the memory
+  c. kill the server and signals to kill their clients

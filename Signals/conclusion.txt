@@ -1,0 +1,7 @@
+Another way of lightweight communication between the processes
+using signals
+
+purpose of it just to notifying process / processes
+in lightweight manner, the size of the message usually 1B/2B
+used mainly in case we need to awake threads on conditional variable,
+kill process, ...

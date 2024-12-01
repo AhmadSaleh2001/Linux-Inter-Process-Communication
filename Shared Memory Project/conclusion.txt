@@ -1,0 +1,10 @@
+Extending the functionality of the project IP Routing table
+by support sending ARP requests between the processes
+the difference here, we will store ARP table into shared memory file
+using mmap
+
+lets assume we have master process (act as a router)
+and another processes act as a clients
+
+when we have new entry added to the routing table
+we need to synchronized it among the clients

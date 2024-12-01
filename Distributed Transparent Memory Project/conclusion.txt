@@ -1,0 +1,21 @@
+implement distributed transparent memory using UDP / TCP
+we have master
+the client send to master that he need to GET / PUT value of X
+since we have large distributed memory, meaning we have many machines provide to
+the master their RAM, so the master is responsible bu putting the data in the correct machine
+each machine we have, either forward the request to another machine if the value
+not exist on it or return it if its exists
+
+Keywords:
+1. Hashing
+2. Forwarding requests
+
+Client communicate with master machine using TCP
+master machine communicate with the cluster of nodes using UDP for efficiency
+we will assume for each spined up node the following:
+1. his TCP port is the entered by the user
+2. his UDP port is (the entered by the user + 2000)
+
+
+Follow up:
+we can implement something like consistent hashing using this project

@@ -1,0 +1,9 @@
+Message queues
+another way of communication in linux
+the difference between them and the sockets that:
+1. easier for handling
+2. async processing
+3. Higher overhead due kernel management
+  a. because data copying from user mode to the kernel mode (to the queue)
+  b. multiple context switches
+4. persist data direct into file, while Unix sockets faster by keep them saved in memory

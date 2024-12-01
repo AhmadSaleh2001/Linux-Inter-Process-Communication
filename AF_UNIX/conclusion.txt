@@ -1,0 +1,10 @@
+AF_UNIX are sockets on linux using C
+there is two types:
+1. without multiplexing
+  a. simply, when we have client and server
+  b. only one client at a time can talk with server
+2. with multiplexing
+  a. multiple client at a time can talk with server using multiplexing
+  b. multiplexing mean:
+    i. ability to store multiple clients information at once in the file descriptor
+    and handle their requests concurrently

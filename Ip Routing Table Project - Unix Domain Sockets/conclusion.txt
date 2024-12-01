@@ -1,0 +1,5 @@
+lets assume we have master process (act as a router)
+and another processes act as a clients
+
+when we have new entry added to the routing table
+we need to synchronized it among the clients using AF_UNIX sockets

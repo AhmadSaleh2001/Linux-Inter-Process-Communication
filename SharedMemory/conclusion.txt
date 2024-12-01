@@ -1,0 +1,20 @@
+Shared memory, another of of communication between the processes
+simply, reserve some memory, make it sharable
+1. when to use it?
+  a. when do we need high performance communication between different part of the system
+  because it has direct memory access
+    no need to copy data from user mode to kernel mode as AF_UNIX and message queues
+
+2. several ways to achieve it:
+  a. on memory
+    i. by reserve some part of the memory and start writing into it
+      1. we can configure it to be shared between processes and put some name into the shared memory
+  b. on file
+    i. we can select some file on the system (the size of it should be well known)
+      for example 20MB
+    ii. then we will map it into the memory to start writing to the by multiple processes
+    iii. this technique avoid explicit file I/O by directly write into memory then
+      the changes that are written into memory will be flushed into the file
+    iv. use cases:
+      1. when we have some external I/O resource like a printer
+        and we need to write into it some data

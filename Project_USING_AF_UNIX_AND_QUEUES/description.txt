@@ -1,0 +1,4 @@
+in this project, we will create server that will listen
+on all types of messages (AF_UNIX, message_queues, shared_memory)
+by adding each listener in the FD
+and of course listen on 0 for user interactions through the console
